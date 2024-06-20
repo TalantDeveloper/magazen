@@ -16,3 +16,27 @@ def detail_view(request, magazen_id):
 
 def about(request):
     return render(request, 'main/about.html')
+
+
+def jurnals_view(request):
+    return None
+
+
+def jurnal_view(request):
+    return None
+
+
+def gazetas_view(request):
+    return None
+
+
+def gazeta_view(request):
+    return None
+
+
+def maqolas_view(request):
+    return None
+
+
+def maqola_view(request):
+    return None
