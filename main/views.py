@@ -9,6 +9,11 @@ def welcome(request):
     return render(request, 'main/welcome.html', context)
 
 
+def magazens_view(request):
+    magazens = Magazen.objects.all()
+    return render(request, 'main/magazens.html', {'magazens': magazens})
+
+
 def detail_view(request, magazen_id):
     magazen = Magazen.objects.get(id=magazen_id)
     return render(request, 'main/detail.html', {'magazen': magazen})
