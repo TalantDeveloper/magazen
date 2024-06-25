@@ -29,8 +29,8 @@ class Category(models.Model):
 class Magazen(models.Model):
     name = models.CharField(max_length=255)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
-    image = models.ImageField(upload_to='image/')
-    file = models.FileField(upload_to='jurnal/')
+    image = models.ImageField(upload_to=upload_to, default="/media/image/logotip.ico", null=True, blank=True)
+    file = models.FileField(upload_to=upload_to)
     content = RichTextUploadingField(verbose_name="Content")
 
     created_at = models.DateTimeField(auto_now_add=True)
